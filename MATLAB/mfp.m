@@ -1,18 +1,19 @@
 n = 1000000; %jumlah history
 enx = importdata('atmos.txt',' ');
 
-avo = 6.022*10^23;
-n2 = 0.78*28.013;
-o2 = 0.21*31.999;
-ar = 0.01*39.948;
-to = n2 + o2 + ar;
+%material udara
+avo = 6.022*10^23; %konstanta avogadro
+n2 = 0.78*28.013; %nitrogen
+o2 = 0.21*31.999; %oksigen
+ar = 0.01*39.948; %argon
+to = n2 + o2 + ar; %total molecular mass
 uu = 1.661*10^(-24);
 
-ene = enx(:,1);
-att = enx(:,2);
-csx = att .* (to/(avo*uu));
-mp = @(x,y) exp(-x*y);
-mf = @(x,y) -log(1-x*(1-exp(-y)));
+ene = enx(:,1); %energi
+att = enx(:,2); %atenuasi xcom
+csx = att .* (to/(avo*uu)); %cross section
+mp = @(x,y) exp(-x*y); %max mean free path
+mf = @(x,y) -log(1-x*(1-exp(-y))); %number of mean free path
 rd = rand(n,1);
 
 z1 = zeros(length(att(:,1)),1);
