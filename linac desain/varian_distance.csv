@@ -1,0 +1,5 @@
+#Spesifikasi jarak linac berdasarkan olofsson et al 2003 untuk linac varian ;;;
+de;target-ekstra;124.3;mm
+du;target-upper colli;278.8;mm
+dl;target-lower colli;366.3;mm
+diso;target-isocenter;1000;mm

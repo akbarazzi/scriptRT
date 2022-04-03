@@ -1,0 +1,5 @@
+#Spesifikasi jarak linac berdasarkan olofsson et al 2003 untuk linac elekta ;;;
+de;target-ekstra;137.1;mm
+du;target-upper colli;311.8;mm
+dl;target-lower colli;432;mm
+diso;target-isocenter;1000;mm
