@@ -6,7 +6,7 @@ function E_i = E_integral(Xv,Yv,eu,el)
 %eu = extra focal on the isocenter respect to upper collimator
 %el = extra focal on the isocenter respect to lower collimator
     A = 3;
-    X_e = Xv/el;
-    Y_e = Yv/eu;
-    E_i = A*X_e(Y_e-Y_e^2-((1/3)*X_e^2));
+    Xe = Xv/el;
+    Ye = Yv/eu;
+    E_i = A*Xe*(Ye-(Ye^2)-((Xe^2)/3));
 end
